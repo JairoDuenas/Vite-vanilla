@@ -1,4 +1,5 @@
 import './style.css';
+import buttonStyle from './button.module.css';
 import javascriptLogo from './javascript.svg';
 import { setupCounter } from './counter.js';
 
@@ -14,10 +15,12 @@ document.querySelector('#app').innerHTML = `
     <div class="card">
       <button id="counter" type="button"></button>
     </div>
+    <button id="btn" class="${buttonStyle.btn}" >Click!</button>
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
   </div>
 `;
+//document.getElementById('btn').className = buttonStyle.btn;
 
 setupCounter(document.querySelector('#counter'));
