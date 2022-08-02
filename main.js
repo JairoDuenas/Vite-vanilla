@@ -4,6 +4,7 @@ import imageStyle from './image.module.css';
 import javascriptLogo from './javascript.svg';
 import { setupCounter } from './counter.js';
 import imgVue from './vue-js.svg';
+import { user } from './data.json';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -22,6 +23,7 @@ document.querySelector('#app').innerHTML = `
     <p class="read-the-docs">
       Click on the Vite logo to learn more
     </p>
+    <pre>${JSON.stringify(user)}</pre>
   </div>
 `;
 //document.getElementById('btn').className = buttonStyle.btn;
