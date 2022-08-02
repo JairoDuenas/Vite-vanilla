@@ -1,3 +1,6 @@
+@import './ejemplo.sass';
+@import './demo.less';
+
 body {
   background-color: #8e6e6e;
 }
