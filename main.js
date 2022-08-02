@@ -1,7 +1,9 @@
 import './style.css';
 import buttonStyle from './button.module.css';
+import imageStyle from './image.module.css';
 import javascriptLogo from './javascript.svg';
 import { setupCounter } from './counter.js';
+import imgVue from './vue-js.svg';
 
 document.querySelector('#app').innerHTML = `
   <div>
@@ -11,6 +13,7 @@ document.querySelector('#app').innerHTML = `
     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
     </a>
+    <img id="imgVue" src="${imgVue}" class="${imageStyle.imgVue}" />
     <h1>Hello Jairo!</h1>
     <div class="card">
       <button id="counter" type="button"></button>
