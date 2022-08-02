@@ -6,6 +6,15 @@ import { setupCounter } from './counter.js';
 import imgVue from './vue-js.svg';
 import { user } from './data.json';
 
+const modules = import.meta.glob('./modules/*.js');
+console.log(modules);
+
+for (const path in modules) {
+  modules[path]().then((module) => {
+    module.load();
+  });
+}
+
 document.querySelector('#app').innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
