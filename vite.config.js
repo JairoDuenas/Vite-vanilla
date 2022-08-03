@@ -19,11 +19,10 @@ export default defineConfig(({ command, mode }) => {
     console.log('modo producción');
     return {
       build: {
-        rollupOptions: {
-          input: {
-            main: resolve(__dirname, 'index.html'),
-            help: resolve(__dirname, 'help', 'help.html'),
-          },
+        lib: {
+          entry: resolve(__dirname, 'lib', 'main.js'),
+          name: 'demo',
+          fileName: (format) => `demo.${format}.js`,
         },
       },
     };
