@@ -5,6 +5,9 @@ import javascriptLogo from './javascript.svg';
 import { setupCounter } from './counter.js';
 import imgVue from './vue-js.svg';
 import { user } from './data.json';
+import suma from './suma.ts';
+
+console.log(`suma 2+3 = ${suma(2, 3)}`);
 
 const modules = import.meta.glob('./modules/*.js');
 console.log(modules);
